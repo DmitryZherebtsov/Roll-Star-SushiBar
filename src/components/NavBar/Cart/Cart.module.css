@@ -1,0 +1,77 @@
+.cart_phone {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.cart_container {
+    position: relative;
+}
+  
+.cart_dot {
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(245, 33, 33);
+    border-radius: 50%;
+}
+
+.colored {
+    width: 3vw;
+    height: auto;
+    cursor: pointer;
+    margin: 0 1em;
+    transition: 0.3s;
+}
+
+.colored:hover {
+    filter: drop-shadow(0 0 0.5rem #B0824E);
+}
+
+.burger_icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.burger_icon .line {
+    width: 120%;
+    height: 4px;
+    border-radius: 1em;
+    background-color: aliceblue;
+    transition: all 0.3s ease;
+}
+
+.line1 {
+    transform: rotate(45deg) translate(5px, 12px);
+}
+
+.line2 {
+    opacity: 0;
+}
+
+.line3 {
+    transform: rotate(-45deg) translate(3px, -10px);
+}
+
+@media (max-width: 800px) {
+    .burger_icon {
+        display: flex;
+    }
+    .cart_phone {
+        justify-content: space-around;
+    }
+    .cart_phone img {
+        width: 2.75em;
+    }
+    .phone {
+        margin-right: 0;
+    }
+}

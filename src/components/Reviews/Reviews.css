@@ -1,0 +1,174 @@
+
+.reviews{
+    display: flex;
+    margin: 0 auto;
+    max-width: 85vw;
+    color: #ffffff;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    /* -ms-user-select: none; */
+    user-select: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.review_form{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.border{
+    border: 1px solid #BA8952;
+    padding: 0em 1em 0 1em;
+    margin: 1em 0;
+}
+
+.border span{
+    color: crimson;
+}
+
+.review_form input{
+    width: 95%;
+    margin: 1em 0;
+    background-color: #1A1714;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    padding: 0.5em 0;
+    color: white;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.review_button{
+    display: flex;
+    justify-content: center;
+}
+
+.send{
+    color: #ffffff;
+    border:  1px solid #BA8952;
+    border-radius: 3px;
+    padding: 0.5em 2em;
+    font-size: 1.5em;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.send:hover{
+    background-color: rgb(255, 255, 255, 0.3);
+}
+
+
+.star-icon .fa-star {
+    font-size: 2em; 
+    margin: 0.2em 0.1em;
+    color: gold;
+    transition: 0.3s;
+}
+
+.star-icon .fa-star:hover {
+    color: rgb(255, 170, 0);
+}
+
+.rating{
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+.rating input:checked + label ~ label{  /* + label вибирає наступний за input:checked елемент*/
+    color: #838383;                   /* ~ label вибирає всі наступні елементи <label>, що йдуть після обраного input:checked + label*/
+}
+.rating label:active{
+    transform: scale(0.8);
+    transition: 0.3s ease;
+}
+
+.review{
+    display: flex;
+}
+.review-left{
+    width: 33%;
+    text-align: center;
+}
+.user-reviews{
+    width: 70%;
+    margin: 0em 3em;
+}
+
+.review-image{
+    width: 5em;
+    height: auto;
+}
+
+.user-reviews .star-icon .fa-star {
+    color: gray; /* Default color for stars */
+}
+  
+.user-reviews .star-icon .fa-star.checked {
+    color: gold; /* Color for checked stars */
+}
+
+.review-right {
+    max-width: 70%; 
+    overflow-wrap: break-word; /* Розривати слова, що не поміщаються */
+    word-wrap: break-word; /* Підтримка для старих браузерів */
+    hyphens: auto; /* Додавати дефіси для розриву слів, якщо підтримується браузером */
+  }
+  
+  .review-comment {
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+@media (max-width: 1200px){
+    .review-left{
+        width: 45%;
+    }
+    .review-right {
+        max-width: 55%; 
+    }
+    .user-reviews{
+        margin-right: 0.4em;
+    }
+}
+
+/* @media (max-width: 900px){
+    .review-left{
+        width: 45%;
+    }
+    
+    .review-right {
+        max-width: 55%; 
+    }
+} */
+
+@media (max-width: 900px){
+    .reviews{
+        display: flex;
+        flex-direction: column;
+    }
+    .review_form{
+        width: 100%;
+    }
+    .user-reviews{
+        width: 100%;
+        margin: 0em 0em;
+    }
+    .review-left{
+        width: 100%;
+        text-align: center;
+    }
+    .review-right{
+        max-width: 100%;
+        /* margin: 0 0.5em; */
+    } 
+    .review{
+        display: flex;
+        flex-direction: column;
+    }
+}

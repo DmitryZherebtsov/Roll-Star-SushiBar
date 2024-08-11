@@ -1,0 +1,111 @@
+.nav {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar {
+    white-space: nowrap;
+    margin: 0 12.5vw;
+}
+
+.menu {
+    display: none;
+    transition: 0.3s;
+    z-index: 2; /* Пріоритет випадного меню більший за інші елементи */
+
+}
+.dropdown:hover .menu {
+    margin-left: 9em;
+    padding: 1em 0;
+    width: 21em;
+    height: auto;
+    position: absolute;
+    display: block;
+    background-color: #3E372F;
+    box-shadow: 8px 8px 22px 0px rgba(0, 0, 0, 0.5);
+}
+
+.options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.option_link {
+    display: flex;
+    align-items: center;
+    width: 13em;
+    padding: 1em 1em;
+    text-decoration: none;
+}
+.option_link:hover {
+    background-color: #998874;
+    transition: 0.3s;
+}
+.options_img {
+    width: 2.5em;
+    height: auto;
+    margin-right: 1em;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 1em;
+    color: white;
+    margin-right: 3vw;
+    margin-left: 3vw;
+    transition: .3s;
+}
+.navbar a::after { /*animation for underline  */
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: #BC864B;
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .3s;
+}
+.navbar a:hover {
+    color: #BC864B;
+}
+.navbar a:hover:after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/* Arrow animation */
+.navbar .arrow {
+    transition: transform 0.3s ease; 
+    width: 1em;
+    height: auto;
+}
+.navbar a:hover .arrow {
+    transform: rotate(180deg);
+}
+
+.white_text {
+    color: white;
+}
+
+@media (max-width: 1600px) {
+    .navbar a {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 800px) {
+    .burger_menu {
+        display: block;
+    }
+    .nav {
+        display: none;
+    }
+    .navbar {
+        white-space: nowrap;
+        margin: 0 1vw;
+    }
+}

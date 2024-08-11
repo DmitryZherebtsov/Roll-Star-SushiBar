@@ -1,0 +1,14 @@
+.rollstarSlider__container {
+    max-width: 1620px;
+    margin: 100px auto;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+.rollstarSlider__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+}

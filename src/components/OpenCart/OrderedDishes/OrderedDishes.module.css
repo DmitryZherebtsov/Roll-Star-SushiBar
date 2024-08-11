@@ -1,0 +1,210 @@
+
+.ordered_food{
+    margin: 1em 2em 2em 2em;
+    color: white;
+    width: 80%;
+}
+
+.scroll{
+    width: 110%;
+    height: 45em;
+    padding-right: 0.5em;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-top: 7px solid #A67B4A;
+    border-bottom: 7px solid #A67B4A;
+    box-shadow: 8px 8px 22px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+.scroll::-webkit-scrollbar {
+    width: 0.7em; 
+}
+.scroll::-webkit-scrollbar-track {
+    background: #0e0e0e;
+    border-radius: 10px;
+}
+.scroll::-webkit-scrollbar-thumb {
+    background: #222222a6;
+    border-radius: 10px;
+}
+.scroll::-webkit-scrollbar-thumb:hover {
+    background: #222222;
+    cursor: pointer;
+}
+
+.empty{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: grey;
+}
+
+.dish{
+    display: flex;
+    width: 94%;
+    border: 1px solid #A67B4A;
+    padding: 1em;
+    margin-top: 1em;
+}
+
+.description{
+    width: 100%;
+    padding: 0 0.5em;
+}
+
+.cross{
+    width: 1.5em;
+    cursor: pointer;
+}
+
+.count img{
+    cursor: pointer;
+}
+
+.first{
+    display: flex;
+    justify-content: space-between;
+}
+.title{
+    overflow: hidden;
+    display: -webkit-box; 
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 0; 
+    line-clamp: 2;
+    text-overflow: ellipsis; 
+    font-size: 1em;
+    max-width: 13em;
+    max-height: 3em;
+}
+
+.second{
+    display: flex;
+    justify-content: flex-end;  
+    margin-top: 2em;
+}
+
+.three{
+    display: flex;
+    justify-content: space-between;
+}
+
+.count{
+    display: flex;
+}
+
+.ordered_food_img{
+    max-width: 10em;
+    height: auto;
+}
+
+.price_place{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 2em;
+}
+
+.price_button{
+    display: flex;
+    justify-content: flex-end;
+    width: 60%;
+    height: 1.2em;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #DBB36E;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 600;
+    background-color: #1A1714;
+    padding: 1em;
+    margin: 0 0 1em 0;
+}
+.price{
+    font-size: 1em;
+    font-weight: 600;
+}
+.grey{
+    color: lightgray;
+}
+
+@media (max-width: 1450px){
+    .ordered_food{
+        margin: 1em 2em 2em 2em;
+        color: white;
+        width: 90%;
+    }
+    .scroll{
+        width: 100%;
+        max-height: 25em;
+        overflow-y: auto;
+    }
+    .title{
+        font-size: 1em;
+        max-width: 12em;
+        max-height: 3em;
+    }
+}
+
+@media (max-width: 800px) {
+    .ordered_food{
+        margin: 0.5em;
+        color: white;
+        width: 95%;
+    }
+    .title{
+        font-size: 0.7em;
+        max-width: 9em;
+        max-height: 3em;
+    }
+    .ordered_food_img{
+        max-width: 7em;
+        height: auto;
+        align-items: center;
+    }
+    .second{
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;  
+        margin-top: 2em;
+    }
+    .three img{
+        margin-top: 0.2em;
+        width: 1.2em !important;
+        height: 1.2em !important;
+    }
+    .dish{
+        display: flex;
+        padding: 1em !important;
+        margin-bottom: 1em !important;
+    }
+    .cross{
+        width: 1em;
+        height: auto;
+    }
+    .second{
+        margin-top: 2em;
+    }
+    .scroll{
+        width: 100%;
+        max-height: 20em;
+        overflow-y: auto;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .cross{
+        margin-bottom: 0.1em;
+    }
+    .grey{
+        font-size: 0.7em;
+    }
+    .price{
+        /* margin-top: 0.7em; */
+        margin-left: 1em;
+        font-size: 0.8em;
+    }
+    .second{
+        margin-top: 1em;
+    }
+  }

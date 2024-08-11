@@ -1,0 +1,101 @@
+.aboutUsPage{
+    animation: fadeIn 0.3s ease-in-out;
+}
+.aboutUsPage h1{
+    color: #E6E6E6;
+    font-size: 35px;
+    font-family: Inter;
+    text-align: center;
+    max-width: 60%;
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+.title-text{
+    color: #A67B4A;
+    white-space: nowrap;
+}
+.aboutUsContainer {
+    width: 60%;
+    margin: 20px auto;
+}
+.row, .row-reverse {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.aboutUsPage img {
+    width: 30vw;
+    height: auto;
+    margin: 0 2em;
+    border-radius: 2px;
+}
+.row.reverse .image {
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+.aboutUsPage p {
+    flex: 1;
+    color: #E6E6E6;
+    font-size: 1.7vw;
+    font-weight: bold;
+    /* text-align: justify; */
+    /* text-align: center; */
+}
+.row{
+    margin-bottom: 50px;
+}
+.row-reverse{
+    margin-bottom: 50px;
+}
+@media (max-width: 1020px){
+    .row{
+        margin-bottom: 2em;
+    }
+    .row-reverse{
+        margin-bottom: 2em;
+    }
+}
+@media (max-width: 768px){
+    .row, .row-reverse {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 0;
+    }
+    .row-reverse{
+        #image{
+            order: 1;
+        }
+    }
+    .row{
+        margin-bottom: 10px;
+    }
+    .row-reverse{
+        margin-bottom: 10px;
+    }
+    .aboutUsPage .row p, .row-reverse p{
+        margin-right: 0;
+    }
+    .aboutUsPage .row-reverse p{
+        margin-left: 0;
+    }
+    .aboutUsPage img{
+        width: 100%;
+        margin: 0;
+    }
+    .aboutUsPage p {
+        font-size: 1em;
+        text-align: center;
+        margin-bottom: 2em;
+    }
+    .aboutUsPage h1{
+        font-size: 30px;
+    }
+}
+@media (max-width: 660px){
+    .title-text{
+        white-space: wrap;
+    }
+}

@@ -1,0 +1,138 @@
+.contact_data{
+    color: white;
+}
+.rows {
+    width: 100%;
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info_data h1{
+    margin: 0.5em 0;
+}
+
+.border{
+    width: 45%;
+    border: 1px solid #BA8952;
+    border-radius: 2px;
+    padding: 0em 1em 0 1em;
+}
+.border span{
+    color: crimson;
+}
+.border input{
+    width: 95%;
+    margin: 1em 0;
+    background-color: #1A1714;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    padding: 0.5em 0;
+    color: white;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+label{
+    font-size: 1em;
+}
+
+.payment_type{
+    margin-top: 0.5em;
+    display: flex;
+    flex-direction: column;
+}
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    display: block;
+    cursor: pointer;
+}
+label span {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5em 1em 0.5em 0.5em; 
+    border-radius: 2em; 
+    transition: 0.25s ease;
+}
+label span:before {
+    content: "";
+    background-color: #1A1714;
+    width: 2em; 
+    height: 2em; 
+    border-radius: 50%;
+    margin-right: 0.6em; 
+    transition: 0.25s ease;
+    box-shadow: inset 0 0 0 0.1em #BA8952; 
+}
+
+input[type="radio"]:checked + span:before {
+    box-shadow: inset 0 0 0 0.6em #BA8952; 
+}
+.btn{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.button_submit{
+    border: 1px solid white;
+    border-radius: 2px;
+    color: white;
+    font-weight: 600;
+    font-size: 1em;
+    background-color: #1A1714;
+    padding: 1em 5em;
+    margin: 1em 0;
+    transition: .3s;
+    cursor: pointer;
+}
+.button_submit:hover{
+    background-color: rgb(255, 255, 255, 0.3);
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+select {
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #BA8952;
+    color: #1A1714;
+    margin-top: 10px;
+}
+
+@media (max-width: 1200px){
+    .btn{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 800px){
+    .border{
+        width: 100%;
+        margin: 1em 0;
+    }
+    .border{
+        width: 90%;
+        border: 1px solid #BA8952;
+        padding: 0em 1em 0 1em;
+    }
+    .btn{
+        margin: 2em 0;
+    }
+    .rows {
+        width: 100%;
+        display: block;
+    }
+    .button_submit{
+        margin: 0 auto;
+    }
+}

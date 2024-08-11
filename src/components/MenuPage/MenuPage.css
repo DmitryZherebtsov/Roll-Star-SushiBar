@@ -1,0 +1,13 @@
+.menupage {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.menupage-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}

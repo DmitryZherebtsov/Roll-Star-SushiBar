@@ -1,0 +1,16 @@
+
+.logo{
+    height: 14vh;
+    width: auto;
+}
+
+@media (max-width: 800px) {
+    .logo {
+      height: 10vh;
+      width: auto;
+    }
+  }
+  
+
+
+

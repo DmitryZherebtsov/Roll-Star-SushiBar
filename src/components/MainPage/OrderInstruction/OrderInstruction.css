@@ -1,0 +1,66 @@
+.instruction {
+  text-align: center;
+  color: #fff;
+}
+
+.stages {
+  margin: 4em 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.stages div {
+  width: 15em;
+  margin: 1em 3em;
+}
+
+.stages h2 {
+  margin-bottom: 1em;
+}
+
+@media (max-width: 1350px) {
+  .stages {
+    justify-content: space-around;
+  }
+
+  .stages > div {
+    width: calc(50% - 6em);
+    margin: 1em 1em; 
+  }
+}
+
+@media (max-width: 800px) {
+  .instruction {
+    margin: 0 2em;
+  }
+
+  .stages {
+    flex-direction: column; 
+    margin: 2em 0;
+  }
+
+  .stages > div {
+    width: 80%; 
+    margin: 0 auto 2em; 
+  }
+
+  .stages > div img {
+    max-width: 100%; 
+  }
+
+  .stages > div h2 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+  }
+
+  .stages > div p {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .stages > div {
+    width: 90%;
+  }
+}
