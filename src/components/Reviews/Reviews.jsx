@@ -61,7 +61,7 @@ const Reviews = ( ) => {
     console.log('Form Data:', formDataObject); //put form data to console
     sendReviewsToServer(formDataObject);
 
-    alert("Вашу форму розглянуть і опублукують.");
+    alert("Дякую! Ваш відгук розглянуть і опублукують.");
     setReviews([...reviews, formDataObject]);
     event.target.reset();
     setRating(5);
