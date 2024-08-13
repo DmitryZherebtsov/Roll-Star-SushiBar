@@ -3,7 +3,7 @@ import NavBar from './components/NavBar/NavBar';
 import OpenCart from './components/OpenCart/OpenCart';
 import Footer from './components/Footer/Footer';
 import MenuPage from './components/MenuPage/MenuPage';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import MainPage from './components/MainPage/MainPage';
 import AboutUsPage from './components/AboutUsPage/AboutUsPage';
 import Reviews from './components/Reviews/Reviews';
