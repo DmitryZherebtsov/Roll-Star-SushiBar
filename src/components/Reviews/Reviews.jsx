@@ -60,6 +60,11 @@ const Reviews = ( ) => {
     formDataObject.rating = rating; // Додати рейтинг до даних форми
     console.log('Form Data:', formDataObject); //put form data to console
     sendReviewsToServer(formDataObject);
+
+    alert("Вашу форму розглянуть і опублукують.");
+    setReviews([...reviews, formDataObject]);
+    event.target.reset();
+    setRating(5);
   };
 
   return (
