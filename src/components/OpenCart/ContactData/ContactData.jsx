@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import style from './ContactData.module.css';
-// import emailjs from 'emailjs-com';
+import emailjs from 'emailjs-com';
 
 const ContactData = ({ orderedItems }) => {
   const [userData, setUserData] = useState({
@@ -44,11 +44,13 @@ const ContactData = ({ orderedItems }) => {
       user: userData,
       orders: orderedItems
     };
+    console.log("------------------------------------combinedData---------------------------------------");
+    console.log(combinedData);
 
     const totalPrice = combinedData.orders.reduce((acc, item) => acc + (item.price * item.quantity), 0);
 
     const sendDataToServer = (combinedData) => {
-      fetch('http://localhost:8080/api/data', {
+      fetch('https://roll-backend-render.onrender.com/api/data', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
@@ -84,6 +86,7 @@ const ContactData = ({ orderedItems }) => {
 
     try {
       sendDataToServer(combinedData);
+      console.log(combinedData);
 
       // await emailjs.send('service_seqpo9b', 'template_7uicn3p', {
       //   message: emailContent,

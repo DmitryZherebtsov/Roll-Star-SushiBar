@@ -1,32 +1,65 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Reviews.css';
 import { home_page } from '../../assets/assets';
 
 const Reviews = ( ) => {
   const [reviews, setReviews] = useState([]);
   const [rating, setRating] = useState(5); // це початкове значення рейтингу яке буде 5
+  
 
   const handleRatingChange = (event) => {
     setRating(Number(event.target.value));
   };
 
+  const [ReviewsFromServer, setReviewsFromServer] = useState([]);
+
+    const fetchReviewsFromServer = () => {
+        // fetch('http://localhost:3000/getReviews')
+        fetch('https://roll-backend-render.onrender.com/api/getReviews')
+            .then(response => response.json())
+            .then(data => {
+              setReviewsFromServer(data);
+            })
+            .catch(error => {
+                console.error('Ошибка при получении данных:', error);
+            })
+            console.log('ReviewsFromServer');
+            console.log(ReviewsFromServer);
+    };
+
+  const sendReviewsToServer = (formDataObject) => {
+      // fetch('http://localhost:3000/reviews', {
+      fetch('https://roll-backend-render.onrender.com/api/reviews', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formDataObject),
+    })
+    .then(response => response.text())
+    .then(result => {
+        console.log(result);
+        setReviews([]);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+ };
+  useEffect(() => {
+    fetchReviewsFromServer();
+    console.log(ReviewsFromServer)
+  }, [])
+
   const handleSubmit = (event) => {
+
+    fetchReviewsFromServer();
+
     event.preventDefault(); // prevent default form submission
     const formData = new FormData(event.target); //create FormData object
     const formDataObject = Object.fromEntries(formData.entries()); // Convert FormData to plain object
     formDataObject.rating = rating; // Додати рейтинг до даних форми
     console.log('Form Data:', formDataObject); //put form data to console
-
-    const code = prompt("Введіть шестизначний код який прийшов вам на телефон:");
-
-    if (code === "123456") {
-      alert("Код прийнято! Вашу форму розглянуть і опублукують.");
-      setReviews([...reviews, formDataObject]);
-      event.target.reset();
-      setRating(5); // скинути рейтинг до 5 зірок після надсилання форми
-    } else {
-      alert("Невірний код. Будь ласка, спробуйте ще раз.");
-    }
+    sendReviewsToServer(formDataObject);
   };
 
   return (
@@ -107,7 +140,7 @@ const Reviews = ( ) => {
         <h1>Відгуки Наших Клієнтів</h1>
         <br />
         <hr />
-        {reviews.map((review, index) => (
+        {ReviewsFromServer.map((review, index) => (
           <div key={index}>
             <br />
             <div className='review'>
