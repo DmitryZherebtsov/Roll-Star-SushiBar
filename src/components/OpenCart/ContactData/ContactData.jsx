@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import style from './ContactData.module.css';
-import emailjs from 'emailjs-com';
 
 const ContactData = ({ orderedItems }) => {
   const [userData, setUserData] = useState({
@@ -90,7 +89,7 @@ const ContactData = ({ orderedItems }) => {
 
       // await emailjs.send('service_seqpo9b', 'template_7uicn3p', {
       //   message: emailContent,
-      //   to_email: 'zherebtsovdima31@gmail.com'
+      //   to_email: 'example@gmail.com'
       // }, 'IOWpIbgbv1Zznt3WH');
 
       alert('Ваше замовлення було відправлено!');
