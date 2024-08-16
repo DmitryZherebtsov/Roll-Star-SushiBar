@@ -2,7 +2,6 @@
     animation: fadeIn 0.3s ease-in-out;
 }
 .aboutUsPage h1{
-    color: #E6E6E6;
     font-size: 35px;
     font-family: Inter;
     text-align: center;
@@ -12,8 +11,11 @@
     margin-bottom: 1em;
 }
 .title-text{
-    color: #A67B4A;
+    color: #E6E6E6;
     white-space: nowrap;
+}
+.title-roll-star{
+    color: #A67B4A;
 }
 .aboutUsContainer {
     width: 60%;
@@ -92,6 +94,9 @@
     }
     .aboutUsPage h1{
         font-size: 30px;
+    }
+    .title-text{
+        display: none;
     }
 }
 @media (max-width: 660px){
