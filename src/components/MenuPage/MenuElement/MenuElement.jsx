@@ -1,4 +1,3 @@
-// MenuElement.jsx
 import React, { useState, useContext } from 'react';
 import { assets } from "../../../assets/assets";
 import { CartContext } from '../../OpenCart/CartContext';

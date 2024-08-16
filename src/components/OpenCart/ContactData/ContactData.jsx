@@ -49,7 +49,7 @@ const ContactData = ({ orderedItems }) => {
     const totalPrice = combinedData.orders.reduce((acc, item) => acc + (item.price * item.quantity), 0);
 
     const sendDataToServer = (combinedData) => {
-      fetch('https://roll-backend-render.onrender.com/api/data', {
+      fetch('http://localhost:3001/api/data', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
@@ -66,41 +66,18 @@ const ContactData = ({ orderedItems }) => {
       console.log("sendDataToServer")
   };
 
-    const emailContent = `Замовлення від ${userData.firstName} ${userData.lastName}
-
-        КОНТАКТНА ІНФОРМАЦІЯ:
-        Телефон: ${userData.phone}
-        Адреса: ${userData.street}, буд. ${userData.house}, під'їзд ${userData.entrance}, поверх ${userData.floor}, квартира ${userData.apartment}
-        Кількість осіб: ${userData.numberOfPersons}
-        Спосіб оплати: ${userData.paymentMethod}
-        Email: ${userData.email}
-        Коментар: ${userData.comment}
-
-        ЗАМОВЛЕННЯ:
-          ${combinedData.orders.map((item, index) => ` 
-          ${index + 1}. ${item.title} - ( ${item.quantity} шт. ) Ціна: ${item.price * item.quantity} грн`).join('\n')}
-
-          Загальна ціна: ${totalPrice} грн
-      `;
-
     try {
       sendDataToServer(combinedData);
       console.log(combinedData);
 
-      // await emailjs.send('service_seqpo9b', 'template_7uicn3p', {
-      //   message: emailContent,
-      //   to_email: 'example@gmail.com'
-      // }, 'IOWpIbgbv1Zznt3WH');
-
       alert('Ваше замовлення було відправлено!');
-      // console.log(combinedData);
       clearForm();
     } catch (error) {
       console.error('Помилка під час відправлення замовлення:', error);
       alert('Сталася помилка під час відправлення замовлення. Спробуйте ще раз.');
     } finally {
       setTimeout(() => {
-        setIsSubmitting(false); // 3 секунди блокування кнопки(щоб запобігти спаму на пошту )
+        setIsSubmitting(false);
       }, 3000);
     }
   };
@@ -133,8 +110,8 @@ const ContactData = ({ orderedItems }) => {
               <input
                 placeholder="Ім'я"
                 type="text"
-                name="firstName" // ім'я поля
-                value={userData.firstName} // тут userData отримує значення поля
+                name="firstName"
+                value={userData.firstName}
                 onChange={handleChange}
                 required
               />

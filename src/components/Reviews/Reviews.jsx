@@ -13,7 +13,7 @@ const Reviews = () => {
   };
 
   const fetchReviewsFromServer = () => {
-    fetch('https://roll-backend-render.onrender.com/api/getReviews')
+    fetch('http://localhost:3001/api/getReviews')
       .then(response => response.json())
       .then(data => {
         setReviewsFromServer(data);
@@ -26,7 +26,7 @@ const Reviews = () => {
   };
 
   const sendReviewsToServer = (formDataObject) => {
-    fetch('https://roll-backend-render.onrender.com/api/reviews', {
+    fetch('http://localhost:3001/api/reviews', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

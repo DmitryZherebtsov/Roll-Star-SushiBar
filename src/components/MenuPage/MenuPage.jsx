@@ -4,7 +4,6 @@ import MenuElement from './MenuElement/MenuElement';
 import { menu_items_list } from "../../assets/assets";
 import "./MenuPage.css";
 import MenuNav from './MenuNav/MenuNav';
-// import OrderedDishes from '../OpenCart/OrderedDishes/OrderedDishes';
 
 const MenuPage = () => {
   const {category: initialCategory} = useParams();

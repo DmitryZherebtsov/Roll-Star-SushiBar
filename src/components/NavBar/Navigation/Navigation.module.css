@@ -13,7 +13,6 @@
     display: none;
     transition: 0.3s;
     z-index: 2; /* Пріоритет випадного меню більший за інші елементи */
-
 }
 .dropdown:hover .menu {
     margin-left: 9em;

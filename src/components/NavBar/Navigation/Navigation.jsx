@@ -26,7 +26,6 @@ const Navigation = () => {
           </div>
         </Link>
 
-
         <Link to='/AboutUsPage'> Про нас </Link>
         <Link to='/Reviews'> Відгуки </Link>
       </nav>

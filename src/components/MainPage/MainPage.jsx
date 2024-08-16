@@ -1,5 +1,4 @@
 import React from 'react'
-// import style from './MainPage.module.css'
 import MainHead from './MainHead/MainHead'
 import DivideElement from './DivideElement/DivideElement'
 import MenuBar from './MenuBar/MenuBar'

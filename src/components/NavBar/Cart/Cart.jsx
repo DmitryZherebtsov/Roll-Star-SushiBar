@@ -1,4 +1,3 @@
-// Cart.jsx
 import React, { useContext } from 'react';
 import style from './Cart.module.css';
 import { nav_assets } from '../../../assets/assets';
@@ -10,10 +9,11 @@ const Cart = ({ isMenuOpen, toggleMenu }) => {
 
   return (
     <div className={style.cart_phone}>
+
       <div>
-        <a href='tel:+380682711816' aria-label="Save contact +380682711816">
-          <img className={style.colored} src={nav_assets.phone} alt="Phone icon" />
-        </a>
+          <a href="tel:+380682711816">
+              <img className={style.colored} src={nav_assets.phone} alt="Phone icon" />
+          </a>
       </div>
       
       <div className={style.cart_container}>

@@ -20,7 +20,6 @@
 }
 .map{
   border-radius: 2em;
-  /* border: 4px solid #B1834F; */
 }
 
 .text-top, .text-bottom {
@@ -38,7 +37,6 @@
 
 @media (max-width: 800px) {
   .map-address {
-    /* overflow: hidden; */
     width: 100%;
     max-width: 100%;
     height: 300px;

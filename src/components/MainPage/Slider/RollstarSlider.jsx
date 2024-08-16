@@ -1,5 +1,3 @@
-//import React, { useRef } from "react";
-
 import styles from "./RollstarSlider.module.css";
 import RollstarSliderList from "./RollstarSliderList";
 

@@ -4,7 +4,6 @@ import ContactData from './ContactData/ContactData';
 import OrderedDishes from './OrderedDishes/OrderedDishes';
 import { CartContext } from './CartContext';
 
-
 const OpenCart = () => {
   const { cart } = useContext(CartContext);
 
@@ -21,7 +20,6 @@ const OpenCart = () => {
           <OrderedDishes orderedItems={cart} />
         </div>
       </div>
-      {/* <center><p>Після відправки зачекайте 2-3 секунди до повідомлення</p></center> */}
       <br />
     </div>
   );

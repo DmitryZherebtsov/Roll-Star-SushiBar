@@ -2,7 +2,6 @@ import React, { Fragment, useRef } from "react";
 import styles from "./RollstarSliderList.module.css";
 import { home_page } from "../../../assets/assets";
 
-
 function RollstarSliderList() {
 
     const leftButton = useRef();

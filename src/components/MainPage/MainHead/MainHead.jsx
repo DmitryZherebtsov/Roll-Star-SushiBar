@@ -22,7 +22,6 @@ const MainHead = () => {
 
         <div className='main_picture'>
             <img className='home_page_picture' src={home_page.mainPicture} alt="" />
-            {/* <img className='home_page_pictureMobile' src={home_page.mainPictureMobile} alt="" /> */}
         </div>
 
     </div>
