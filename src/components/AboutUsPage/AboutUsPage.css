@@ -52,6 +52,10 @@
 .row-reverse{
     margin-bottom: 50px;
 }
+.br-text{
+    display: none;
+}
+
 @media (max-width: 1020px){
     .row{
         margin-bottom: 2em;
@@ -94,6 +98,9 @@
     }
     .aboutUsPage h1{
         font-size: 30px;
+    }
+    .br-text{
+        display: block;
     }
 }
 @media (max-width: 660px){

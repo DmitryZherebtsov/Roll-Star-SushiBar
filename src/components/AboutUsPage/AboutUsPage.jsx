@@ -6,9 +6,10 @@ const AboutUsPage = () => {
   return (
     <div className='aboutUsPage'>
       <h1>
-        <span className='title-text'>Ласкаво просимо до</span> 
+        <span className='title-text'>Ласкаво </span> 
+        <br className='br-text' /><span className='title-text'>просимо до</span> 
         <br /><span className='title-roll-star'>ROLLSTAR</span> 
-        <br /><span className='title-roll-star'>SUSHI BAR!</span> 
+        <br className='br-text' /><span className='title-roll-star'>SUSHI BAR!</span> 
       </h1>
         <div className="aboutUsContainer">
             <div className="row">
