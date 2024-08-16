@@ -7,7 +7,8 @@ const AboutUsPage = () => {
     <div className='aboutUsPage'>
       <h1>
         <span className='title-text'>Ласкаво просимо до</span> 
-        <br /><span className='title-roll-star'>ROLLSTAR SUSHI BAR!</span> 
+        <br /><span className='title-roll-star'>ROLLSTAR</span> 
+        <br /><span className='title-roll-star'>SUSHI BAR!</span> 
       </h1>
         <div className="aboutUsContainer">
             <div className="row">

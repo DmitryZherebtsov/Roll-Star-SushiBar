@@ -95,9 +95,6 @@
     .aboutUsPage h1{
         font-size: 30px;
     }
-    .title-text{
-        display: none;
-    }
 }
 @media (max-width: 660px){
     .title-text{
