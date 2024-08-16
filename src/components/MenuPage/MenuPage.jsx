@@ -45,7 +45,6 @@ const MenuPage = () => {
           />
         ))}
       </div>
-      {/* <OrderedDishes orderedItems={orderedItems} /> */}
     </div>
   );
 }

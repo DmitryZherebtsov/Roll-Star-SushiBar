@@ -11,7 +11,7 @@ const Cart = ({ isMenuOpen, toggleMenu }) => {
   return (
     <div className={style.cart_phone}>
       <div>
-        <a href='tel:+380682711816' aria-label="Phone number +380682711816">
+        <a href='tel:+380682711816' aria-label="Save contact +380682711816">
           <img className={style.colored} src={nav_assets.phone} alt="Phone icon" />
         </a>
       </div>
